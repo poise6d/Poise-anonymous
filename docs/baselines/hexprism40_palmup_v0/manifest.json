@@ -1,0 +1,204 @@
+{
+  "baseline_id": "hexprism40_palmup_v0",
+  "status": "provisional",
+  "designated_on": "2026-09-17",
+  "description": "User-designated baseline for subsequent POISE development and training comparisons.",
+  "training_run": "hexprism40_fixedpalmup_2x4090d_32000pergpu_paper_gf20k_std030_s42_20260915",
+  "training_status": "stopped_by_user",
+  "stopped_utc": "2026-09-17T13:30:14.167862+00:00",
+  "from_scratch": true,
+  "checkpoint": {
+    "path": "outputs/training/hexprism40_fixedpalmup_2x4090d_32000pergpu_paper_gf20k_std030_s42_20260915/model_31200.pt",
+    "sha256": "f801420829d6d92a31c7cf0a634a7d893e8211b89dcaac744d46be00591da87c",
+    "iteration_index": 31200,
+    "completed_updates": 31201,
+    "transitions": 15974912000,
+    "selection": "last complete saved checkpoint when user stopped training; not selected as best"
+  },
+  "launch": {
+    "launcher": "scripts/train_4090d.sh",
+    "physical_gpus": 2,
+    "gpu_model": "RTX 4090 D",
+    "envs_per_rank": 32000,
+    "total_envs": 64000,
+    "rank_seeds": [
+      42,
+      43
+    ],
+    "backend": "gloo",
+    "planned_updates": 150000,
+    "rollout_steps": 8,
+    "save_interval": 100,
+    "global_frontier_min_completed_events": 20000,
+    "effective_action_std_bounds": [
+      0.3,
+      1.5
+    ]
+  },
+  "snapshots": {
+    "env.json": "37cbebeae4c191a2da7be4d23a93e9b8244f246920217250e8c4ac96c3c1399b",
+    "agent.json": "20e139ab862e28c0fc2e9765f30bf36ccc40d7b70e5dff3782ccb0b86db0df29",
+    "topology.json": "61739a41344715fb9034c902c0421d77b952fcd2071b40c6efbbd7e4bcf7811a"
+  },
+  "env_snapshot_changes": {
+    "robot_cfg.spawn.usd_path": "Replaced source checkout prefix with repository-relative public asset path.",
+    "log_dir": "Set to null; output is selected at launch."
+  },
+  "eval_contract": {
+    "rows": 6842,
+    "parents": 486,
+    "workspace_rows": 5696,
+    "first_target_pairing": "exact across all models and historical bank",
+    "horizon_policy_steps": 400,
+    "dwell_policy_steps": 20,
+    "policy_hz": 20,
+    "eval_dr_disabled": true,
+    "scope": "same generation-0 targets; subsequent targets are not paired",
+    "bootstrap_samples": 10000,
+    "bootstrap_seed": 20260917,
+    "closeness_margin_pp": 5,
+    "limits": "one target per training-cache row; not held-out grasps, full-DR robustness, or real-world deployment"
+  },
+  "evaluation": {
+    "legacy_components": {
+      "baseline": {
+        "successes": 4698,
+        "rows": 6842,
+        "success_pct": 68.66413329435838,
+        "workspace_success_pct": 68.25842696629213,
+        "drop_pct": 4.998538439052909,
+        "mean_targets": 2.2608886290558314,
+        "mean_success_latency_s": 5.549872286079183,
+        "median_success_latency_s": 4.7,
+        "paired_initial_state_and_target_exact": true
+      },
+      "historical_latest33200": {
+        "successes": 4665,
+        "rows": 6842,
+        "success_pct": 68.18181818181817,
+        "workspace_success_pct": 68.13553370786516,
+        "drop_pct": 7.234726688102894,
+        "mean_targets": 2.1924875767319496,
+        "mean_success_latency_s": 5.616559485530547,
+        "median_success_latency_s": 4.5,
+        "paired_initial_state_and_target_exact": true
+      },
+      "baseline_vs_historical_latest33200": {
+        "rows": 6842,
+        "difference_pp": 0.482315112540193,
+        "row_bootstrap_95ci_pp": [
+          -0.6577024261911721,
+          1.6226980415083259
+        ],
+        "parent_cluster_bootstrap_95ci_pp": [
+          -0.879802465851156,
+          1.8235064655530302
+        ],
+        "mcnemar_exact_p": 0.4312495441006419,
+        "both_success": 3855,
+        "reference_only": 810,
+        "current_only": 843,
+        "neither": 1334,
+        "within_5pp_point_estimate": true,
+        "within_5pp_parent95ci": true,
+        "workspace": {
+          "rows": 5696,
+          "difference_pp": 0.12289325842696629,
+          "row_bootstrap_95ci_pp": [
+            -1.1762640449438202,
+            1.4224894662921284
+          ],
+          "parent_cluster_bootstrap_95ci_pp": [
+            -1.4010583409896253,
+            1.6164034132709968
+          ],
+          "mcnemar_exact_p": 0.8747615758634323,
+          "both_success": 3160,
+          "reference_only": 721,
+          "current_only": 728,
+          "neither": 1087,
+          "within_5pp_point_estimate": true,
+          "within_5pp_parent95ci": true
+        }
+      }
+    },
+    "full_pose": {
+      "baseline": {
+        "successes": 4369,
+        "rows": 6842,
+        "success_pct": 63.85559777842737,
+        "workspace_success_pct": 63.41292134831461,
+        "drop_pct": 4.779304296989184,
+        "mean_targets": 1.9203449283835137,
+        "mean_success_latency_s": 5.8239871824216065,
+        "median_success_latency_s": 4.8500000000000005,
+        "paired_initial_state_and_target_exact": true
+      },
+      "historical_latest33200": {
+        "successes": 4345,
+        "rows": 6842,
+        "success_pct": 63.5048231511254,
+        "workspace_success_pct": 63.43047752808989,
+        "drop_pct": 6.518561824028062,
+        "mean_targets": 1.8402513884828997,
+        "mean_success_latency_s": 5.71379746835443,
+        "median_success_latency_s": 4.7,
+        "paired_initial_state_and_target_exact": true
+      },
+      "baseline_vs_historical_latest33200": {
+        "rows": 6842,
+        "difference_pp": 0.35077462730195846,
+        "row_bootstrap_95ci_pp": [
+          -0.8330897398421515,
+          1.5492546039169834
+        ],
+        "parent_cluster_bootstrap_95ci_pp": [
+          -1.0004557249882025,
+          1.711649437908007
+        ],
+        "mcnemar_exact_p": 0.5796357007702894,
+        "both_success": 3495,
+        "reference_only": 850,
+        "current_only": 874,
+        "neither": 1623,
+        "within_5pp_point_estimate": true,
+        "within_5pp_parent95ci": true,
+        "workspace": {
+          "rows": 5696,
+          "difference_pp": -0.0175561797752809,
+          "row_bootstrap_95ci_pp": [
+            -1.3693820224719102,
+            1.3518258426966292
+          ],
+          "parent_cluster_bootstrap_95ci_pp": [
+            -1.5453983382888266,
+            1.4778818248555778
+          ],
+          "mcnemar_exact_p": 1.0,
+          "both_success": 2871,
+          "reference_only": 742,
+          "current_only": 741,
+          "neither": 1342,
+          "within_5pp_point_estimate": true,
+          "within_5pp_parent95ci": true
+        }
+      }
+    }
+  },
+  "evaluation_artifacts": "outputs/evaluation/poise_comparison_20260917",
+  "policy": "Use this baseline as the reference for future changes; record deviations and create a new version when replacing it. Keep v0 snapshots unchanged.",
+  "local_asset_sha256": {
+    "data/geometry_latents/sharpa_hexprism40_bps64_mesh_data_64_v1.pt": "8aadb99540dabefc67eacd41f90cf9c02d8825ac85f46ab0f0ed1add955055ff",
+    "data/hand_fields/sharpa_wave14_hb1/right_hand_C_MC_collision_sdf_2mm.npz": "1c60b8a6c392116e903335255f6df4069afc5aeda0acd5c1f8ed0dd466799736",
+    "data/local_assets.json": "f748275e3b0b98ca07323013a27e91d56d0c53f20ca3258df73f5f73ca0b7beb",
+    "data/robots/sharpa_wave/provenance.json": "5c89b98f4d4d1fb32efba744ae7f2fa65b0f5df495d9aa8e0ea246c051e13a8e",
+    "data/robots/sharpa_wave/right_sharpa_wave.usda": "043bce67fd6b059bd2290b40667ad3b161b4b7f2a76eebf86b5fd757838552b7",
+    "data/stable_grasps/sharpa_manual_hex_prisms/usda09/regular_hex_prism_af40mm_h40mm_chamfered_hb1wave14_usda09_lightning711_variants10to20_palmup_omniwrist8_hold2s_training.pt": "415ec9650daaad4312c45f4c302f6752281f8b147038adf55664ff8898409b44"
+  },
+  "evidence_redacted_for_release": true,
+  "anonymous_review": {
+    "metadata_only_redaction": true,
+    "numeric_training_configuration_unchanged": true,
+    "checkpoint_bytes_unchanged": true
+  }
+}

@@ -1,0 +1,86 @@
+# Poise v0.1.0-rc1
+
+The first release scope is training and simulation reproduction of four fixed
+Sharpa Wave baselines, with optional new-grasp generation. Deployment is
+experimental. General new-hand support and independently benchmarked robot
+control are not promised.
+
+## Rights and distribution
+
+The rights holders authorize distribution of Poise-owned code, authored object
+assets, grasp caches and checkpoints under the terms recorded below.
+
+- Poise-owned code/documentation: MIT, with exceptions in NOTICE.
+- Authored meshes, caches, geometry descriptors and policy weights: CC BY 4.0.
+- Sharpa upstream files: Apache 2.0; Poise collision layers: MIT.
+- LyGra-derived adapter and compatibility patch: CC BY-NC 4.0, with attribution.
+- FoundationPose source/weights: external, non-commercial research/evaluation
+  terms at the pinned revision; not redistributed by Poise.
+
+See [rights manifest](../../manifests/rights.json) and [NOTICE](../../NOTICE).
+The MIT core does not change optional components' non-commercial restrictions.
+
+## Shared asset transport
+
+The four setups use a single pinned release index and 11 training packages: common hand
+assets, shared Hex40 assets, extra Convex9 assets, HexHammer assets, three
+geometry files and four independent checkpoints. A twelfth, optional generation package contains the
+numeric joint-limit reference used by grasp search. Files appear in one package;
+setups reference shared dependencies. Geometry tensors retain their exact object
+order. SHA256 identifies archives and every extracted file.
+
+```bash
+# Maintainer: builds locally and binds the index; never uploads
+PYTHONPATH=source python scripts/release/package_assets.py \
+  --output outputs/releases/candidate/assets --bind
+
+# User: download only this setup's required packages and reference checkpoint
+poise fetch-assets --setup hexhammer_palmup_fullpose_192k_v1 --with-reference
+```
+
+The importer reuses correct existing files, skips checkpoints unless requested,
+verifies all missing dependencies before installation, and rejects conflicting
+files. Legacy complete tar bundles and data workspaces are still supported.
+The pinned index points to the
+[v0.1.0-rc1 Release](https://github.com/poise6d/Poise/releases/tag/v0.1.0-rc1)
+in the source repository. Large assets never enter Git history. Raw geometry and
+checkpoint files are accompanied by NOTICE, licenses and the rights manifest.
+Use `--source` with downloaded files for offline or authenticated access; see
+[reproduction](../reproduction.md).
+
+## Review source snapshot
+
+This independent source snapshot contains no prior Git history. Author-identifying
+documentation and provenance have been withheld; third-party attribution remains.
+See [anonymous review](../anonymous_review.md) for its scope.
+
+## Hardware and profiles
+
+| Setup | Reference hardware / topology | Gate | Target range | Reference |
+|---|---|---|---|---|
+| Hex40 palm-up | 2 GPUs, 2×32k = 64k | GF20k | 180° / 30 mm | 31200 |
+| Convex9 palm-up | 1 large GPU, 2×32k = 64k | GF5k per object | 180° / 30 mm | 23300 |
+| Hex40 OmniWrist | 4×A800 80GB, 8×24k = 192k | GF160k | 180° / 30 mm | 35800 |
+| HexHammer palm-up | 4×A800 80GB, 8×24k = 192k | GF20k | 180° / 100 mm | 89800 |
+
+All start from seed 42, use eight rollout steps, strict FullPose success and no
+tactile input. The 192k cloud runs used 80GB A800s; use that configuration for
+reference-scale reproduction. The historical 2-GPU Hex40 measurement was about
+21.45 GiB VRAM per GPU; this is not a peak guarantee or a Convex9 estimate.
+For 192k jobs, the tested launch guidance is at least 64 vCPUs / 256 GiB host RAM.
+Small smoke (8 environments; Convex9 18) and reference rollout (4; Convex9 9)
+are separate from formal-scale requirements. Local acceptance uses an RTX 4090
+with approximately 48 GiB reported memory, not a standard 24GB memory guarantee.
+No minimum VRAM claim is made without a measured result for that setup.
+
+Hex40/Convex9 qualitative rollout disables most noise/randomization and samples
+0–180° / 0–30 mm uniformly. HexHammer reference rollout preserves training noise,
+randomization and target sampling, initialized at the saved 180° / 100 mm range.
+Full curriculum is not a 100% success-rate claim. See each baseline for provenance.
+
+## Asset metadata
+
+Historical workstation paths in ten grasp caches and the palm SDF metadata have
+been redacted for anonymous review. All numerical arrays, grasp rows, policy
+weights and training settings are preserved. File and package hashes have been
+recomputed for these anonymous artifacts. The four checkpoint files are unchanged.

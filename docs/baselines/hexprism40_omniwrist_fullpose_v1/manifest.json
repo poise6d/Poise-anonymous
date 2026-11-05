@@ -1,0 +1,53 @@
+{
+  "baseline_id": "hexprism40_omniwrist_fullpose_v1",
+  "status": "private_staging",
+  "designated_on": "2026-09-28",
+  "training_task": "poise-hex40-omniwrist-fullpose-4xa800-192k-gf160k-s42",
+  "training_run": "Hex40_OmniWrist_FullPose_4xA800_192k_GF160k_S42_Scratch",
+  "from_scratch": true,
+  "checkpoint": {
+    "path": "data/checkpoints/hexprism40_omniwrist_fullpose_v1/model_35800.pt",
+    "sha256": "015cce3ad9dfdb5c76fa270ac1c328812cac6463bd7965425bc896331f2102cf",
+    "iteration_index": 35800,
+    "completed_updates": 35801,
+    "transitions": 54990336000,
+    "selection": "Latest complete checkpoint observed on source server at designation; not selected as best"
+  },
+  "training": {
+    "seed": 42,
+    "iterations": 150000,
+    "envs_per_rank": 24000,
+    "world_size": 8,
+    "physical_gpus": 4,
+    "backend": "gloo",
+    "global_frontier_min": 160000,
+    "smoke_num_envs": 8,
+    "smoke_iterations": 2
+  },
+  "checkpoint_curriculum": {
+    "rotation_max_rad": 3.141592264175415,
+    "translation_max_m": 0.029999999329447746
+  },
+  "snapshots": {
+    "env.json": "f4eb7ae129cafbf94221399cd8857ab86734ddca2d60e7b43714de3e9daa076d",
+    "env.source.json": "e4fa5e17ce6fcdd4599493a1c339d090d78fd6fef4c6a17e4b401a8974738cb3",
+    "agent.json": "20e139ab862e28c0fc2e9765f30bf36ccc40d7b70e5dff3782ccb0b86db0df29",
+    "topology.json": "070bcab10a2852336b706babab341861111dd683931263aae330df393be7e98e"
+  },
+  "env_snapshot_changes": {
+    "log_dir": "null; output chosen at launch",
+    "robot_cfg.spawn.usd_path": "repository-relative verified public hand asset"
+  },
+  "evaluation": {
+    "checkpoint_35800": "No quantitative goal-reaching evaluation yet; setup integration validated separately.",
+    "earlier_checkpoint_35600": "docs/evaluations/2026-09-28-hex40-fullpose-model35600-wrist/README.md"
+  },
+  "asset_manifest": "manifests/setups/hexprism40_omniwrist_fullpose_v1.json",
+  "asset_manifest_sha256": "6831448ecf72bd27391422257e94d245d496fdb20a8be103dc5f74704d8be01d",
+  "evidence_redacted_for_release": true,
+  "anonymous_review": {
+    "metadata_only_redaction": true,
+    "numeric_training_configuration_unchanged": true,
+    "checkpoint_bytes_unchanged": true
+  }
+}

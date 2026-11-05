@@ -1,0 +1,17 @@
+{
+  "schema_version": 1,
+  "setup_id": "grasp_hexprism40_v1",
+  "distribution": {
+    "status": "published",
+    "release_index": "manifests/releases/v0.1.0-rc1.json",
+    "release_index_sha256": "e820801e8fd148f04de7fb1a6d5a8ee006b3c7928e32956a94008a90c429b2d9"
+  },
+  "files": [
+    {
+      "path": "data/robots/sharpa_limits/right_sharpa_wave.usda",
+      "bytes": 56056,
+      "sha256": "cb2ee455690cab3a7fb6912b9886d9205e57ca977d6ea2f132ac413442c9a09d",
+      "role": "generation_joint_reference"
+    }
+  ]
+}

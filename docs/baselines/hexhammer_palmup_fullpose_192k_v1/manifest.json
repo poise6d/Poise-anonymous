@@ -1,0 +1,63 @@
+{
+  "baseline_id": "hexhammer_palmup_fullpose_192k_v1",
+  "status": "private_staging",
+  "designated_on": "2026-10-09",
+  "training_task": "poise-hexhammer-palmup-fullpose-notactile-4xa800-192k-gf20k-s42",
+  "training_run": "HexHammer_PalmUp_FullPose_NoTactile_A244_C492_4xA800_192k_GF20k_S42_Scratch",
+  "from_scratch": true,
+  "checkpoint": {
+    "path": "data/checkpoints/hexhammer_palmup_fullpose_192k_v1/model_89800.pt",
+    "sha256": "5c6e3674b055574c8a75e5ac800d3534b29fa39ac3d9dbb7a5640dbb7e7180c2",
+    "iteration_index": 89800,
+    "completed_updates": 89801,
+    "transitions": 137934336000,
+    "selection": "Latest complete checkpoint downloaded at 2026-10-09T02:35:18Z; frozen at designation, not selected as best"
+  },
+  "training": {
+    "seed": 42,
+    "iterations": 150000,
+    "envs_per_rank": 24000,
+    "world_size": 8,
+    "physical_gpus": 4,
+    "backend": "gloo",
+    "global_frontier_min": 20000,
+    "smoke_num_envs": 8,
+    "smoke_iterations": 2
+  },
+  "checkpoint_curriculum": {
+    "adaptive_target_delta_max": 3.141592264175415,
+    "adaptive_chain_target_delta_max": 3.141592264175415,
+    "adaptive_translation_delta_max": 0.10000000149011612,
+    "adaptive_chain_translation_delta_max": 0.009999999776482582,
+    "adaptive_target_delta_max_by_object": [
+      0.0872664600610733
+    ],
+    "adaptive_chain_target_delta_max_by_object": [
+      0.0872664600610733
+    ],
+    "adaptive_translation_delta_max_by_object": [
+      0.009999999776482582
+    ],
+    "adaptive_chain_translation_delta_max_by_object": [
+      0.009999999776482582
+    ]
+  },
+  "snapshots": {
+    "env.json": "00264c8f6cb01f52a6203897856a297f022ca98a8ff9600071b988cc1094fae7",
+    "env.source.json": "45e983ead07e04ff772a1660409a9bf18217ce3598b7b433418052234d31ded1",
+    "agent.json": "20e139ab862e28c0fc2e9765f30bf36ccc40d7b70e5dff3782ccb0b86db0df29",
+    "topology.json": "9c1070f2cb22a1ad142fb17a4b3392aad0aea77629684d8e792cb081f14e1115",
+    "source-launch.json": "ce9e40cdec06ef937b405bba3a5efd1f83a2aefa4abcce5e28b2e537793e682a"
+  },
+  "env_snapshot_changes": {
+    "log_dir": "null; output chosen at launch",
+    "robot_cfg.spawn.usd_path": "repository-relative verified hand asset"
+  },
+  "evaluation": "No independent goal-reaching success-rate evaluation for this checkpoint; full curriculum does not imply 100% success.",
+  "evidence_redacted_for_release": true,
+  "anonymous_review": {
+    "metadata_only_redaction": true,
+    "numeric_training_configuration_unchanged": true,
+    "checkpoint_bytes_unchanged": true
+  }
+}
