@@ -5,8 +5,8 @@
     "assets-common-v1": {
       "filename": "assets-common-v1.tar.gz",
       "format": "tar.gz",
-      "bytes": 5487093,
-      "sha256": "d0fa00c48813fef3c241015d4fd5c2749e59877581706d1c5bfc90ae6ac3dfe3",
+      "bytes": 5487108,
+      "sha256": "bce745ff2112f6dc82f97ebdb737c6d4627d4bcc539776f16dfc7ec7c1808e45",
       "url": "https://github.com/poise6d/Poise/releases/download/v0.1.0-rc1/assets-common-v1.tar.gz",
       "files": [
         {
@@ -212,8 +212,8 @@
     "assets-convex9-extra-v1": {
       "filename": "assets-convex9-extra-v1.tar.gz",
       "format": "tar.gz",
-      "bytes": 23341564,
-      "sha256": "00575a6fd7b7f701bb41d1dd24beed8fc2aa01d0adf7dc49cf47290678104d4b",
+      "bytes": 23341581,
+      "sha256": "1f30002f6709229e8247e5fb930fa9035b722c8a11a680661b8c4e97bedee910",
       "url": "https://github.com/poise6d/Poise/releases/download/v0.1.0-rc1/assets-convex9-extra-v1.tar.gz",
       "files": [
         {
@@ -461,8 +461,8 @@
     "assets-generation-v1": {
       "filename": "assets-generation-v1.tar.gz",
       "format": "tar.gz",
-      "bytes": 18241,
-      "sha256": "bb32cd640a445e50192ba78a07c1b4f41eeb256c09f23da0bf031ab675429304",
+      "bytes": 18260,
+      "sha256": "4a29cd1f391002ddbcdc2e67b050b9079992facd0cf17013382af4244e419ee8",
       "url": "https://github.com/poise6d/Poise/releases/download/v0.1.0-rc1/assets-generation-v1.tar.gz",
       "files": [
         {
@@ -476,8 +476,8 @@
     "assets-hex40-v1": {
       "filename": "assets-hex40-v1.tar.gz",
       "format": "tar.gz",
-      "bytes": 2880445,
-      "sha256": "8e2667f3f1913370639bc048bb04f66d1cd71f5a7ff4ce1643d96b6002fad564",
+      "bytes": 2880462,
+      "sha256": "1f3ebf02a8ab2747ce4242093f9907f24a579d0ce8fd730e851aa279fac72cb9",
       "url": "https://github.com/poise6d/Poise/releases/download/v0.1.0-rc1/assets-hex40-v1.tar.gz",
       "files": [
         {
@@ -515,8 +515,8 @@
     "assets-hexhammer-v1": {
       "filename": "assets-hexhammer-v1.tar.gz",
       "format": "tar.gz",
-      "bytes": 4873302,
-      "sha256": "d0d8b47b106b95b85604964fbbcd28aa049dec514e01c1c3584a71affbaa9f25",
+      "bytes": 4873319,
+      "sha256": "29ca1b95d1d3a9846789b388d16dd590bcf890c4433c7bf34e26be542b04de9e",
       "url": "https://github.com/poise6d/Poise/releases/download/v0.1.0-rc1/assets-hexhammer-v1.tar.gz",
       "files": [
         {

@@ -43,7 +43,7 @@
     "earlier_checkpoint_35600": "docs/evaluations/2026-09-28-hex40-fullpose-model35600-wrist/README.md"
   },
   "asset_manifest": "manifests/setups/hexprism40_omniwrist_fullpose_v1.json",
-  "asset_manifest_sha256": "6831448ecf72bd27391422257e94d245d496fdb20a8be103dc5f74704d8be01d",
+  "asset_manifest_sha256": "47204b2ef8ae5606e3adb64ed8f489e75cdd58704f58f438db64a7efe2c9d4fc",
   "evidence_redacted_for_release": true,
   "anonymous_review": {
     "metadata_only_redaction": true,

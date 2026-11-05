@@ -4,7 +4,7 @@
   "distribution": {
     "status": "published",
     "release_index": "manifests/releases/v0.1.0-rc1.json",
-    "release_index_sha256": "e820801e8fd148f04de7fb1a6d5a8ee006b3c7928e32956a94008a90c429b2d9"
+    "release_index_sha256": "ff43f71d05e81229831ec1305f69956fee2cd11503251d28b5b619e2a198e32e"
   },
   "files": [
     {
