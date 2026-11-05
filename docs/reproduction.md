@@ -3,7 +3,7 @@
 Use a **source checkout**, installed editable, in a prepared Isaac Lab environment.
 The default route needs no LyGra, FoundationPose, camera, SDK or research checkout.
 Code and assets are versioned together in the
-[Poise release](https://github.com/poise6d/Poise/releases/tag/v0.1.0-rc1).
+[Poise release](https://github.com/poise6d/Poise-anonymous/releases/tag/v0.1.0-rc1).
 Commands below run from the POISE root.
 
 ## 1. Prepare the simulation environment
@@ -61,7 +61,7 @@ For a repository with restricted access, download through an authenticated GitHu
 CLI first; the automatic HTTPS downloader does not use GitHub login credentials:
 
 ```bash
-gh release download v0.1.0-rc1 --repo poise6d/Poise --dir /path/to/release/assets
+gh release download v0.1.0-rc1 --repo poise6d/Poise-anonymous --dir /path/to/release/assets
 poise fetch-assets --setup hexprism40_palmup_v1 \
   --source /path/to/release/assets --with-reference
 ```

@@ -92,7 +92,7 @@
       "repeat_install_reused": 80
     }
   },
-  "release_index_sha256": "ff43f71d05e81229831ec1305f69956fee2cd11503251d28b5b619e2a198e32e",
+  "release_index_sha256": "6f8b0b94ba03bf4bab8ac88d4a1f537c05a60b52d3313dc394acf56bc6bd2a5d",
   "runtime_files_sha256": {
     "source/poise/__init__.py": "9a27bad7036d675b8167a41ba952f4ba110e302943eb036e7d48d343b4419db3",
     "source/poise/assets/__init__.py": "34bdae23b35c105c88a7f78985b1f66c3afadd7c910d91252e3a16c916d28c35",
@@ -218,5 +218,9 @@
     "Small headless integration checks; no new full-scale training, independent success-rate benchmark or real-hardware trial.",
     "Final package checks include repackaging with exact third-party license bytes; simulator and optimizer runtime code and numerical inputs are identical to those exercised.",
     "No GitHub upload, hosted CI or anonymous HTTPS download has occurred for this snapshot."
-  ]
+  ],
+  "delivery_binding": {
+    "repository": "poise6d/Poise-anonymous",
+    "change": "Download URLs and dependent manifest hashes rebound to the repository created by the owner. Runtime code, recipes, data packages and checkpoint bytes are unchanged."
+  }
 }

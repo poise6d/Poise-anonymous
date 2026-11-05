@@ -15,7 +15,7 @@
     "sha256": "d3b0a86835fdf59dd606adda68304f9f9c6d9778ebc93f919007d965cdc543ef"
   },
   "assets_manifest": "manifests/setups/hexprism40_palmup_v1.json",
-  "assets_manifest_sha256": "ef89f252d36efe8daec1fdb55254dde8640b0c4e7269791ce856942a9f6a9bd6",
+  "assets_manifest_sha256": "2c34b3436375cc730503d834f6231246df1e99ab41a58c7b1dc88281872b8192",
   "objects": [
     {
       "id": "regular_hex_prism_af40mm_h40mm_chamfered",

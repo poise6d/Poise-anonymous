@@ -15,7 +15,7 @@
     "sha256": "d3b0a86835fdf59dd606adda68304f9f9c6d9778ebc93f919007d965cdc543ef"
   },
   "assets_manifest": "manifests/setups/hexhammer_palmup_fullpose_192k_v1.json",
-  "assets_manifest_sha256": "80023cd054c263b39921d4ec6d8ea230ee6245e1c33237a5d71857f3f6a7a65d",
+  "assets_manifest_sha256": "09452b239b7c4fce55b6f599930f9f09861863212a09dbd8aeaf5814e0ab2b10",
   "objects": [
     {
       "id": "t_shape_hex_prism_hammer_chamfered",

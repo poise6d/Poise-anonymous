@@ -15,7 +15,7 @@
     "sha256": "d3b0a86835fdf59dd606adda68304f9f9c6d9778ebc93f919007d965cdc543ef"
   },
   "assets_manifest": "manifests/setups/manualconvex9_palmup_v1.json",
-  "assets_manifest_sha256": "50898480c657e8d2170f5858bfa540d8edcb1c19139e73cd935dca91c34e97bd",
+  "assets_manifest_sha256": "710bd3057e864e032f9166767eaebc13bea9bf8723fa9072675be89944fd5079",
   "objects": [
     {
       "id": "truncated_square_bipyramid_40mm_chamfered",

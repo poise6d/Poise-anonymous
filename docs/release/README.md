@@ -42,7 +42,7 @@ The importer reuses correct existing files, skips checkpoints unless requested,
 verifies all missing dependencies before installation, and rejects conflicting
 files. Legacy complete tar bundles and data workspaces are still supported.
 The pinned index points to the
-[v0.1.0-rc1 Release](https://github.com/poise6d/Poise/releases/tag/v0.1.0-rc1)
+[v0.1.0-rc1 Release](https://github.com/poise6d/Poise-anonymous/releases/tag/v0.1.0-rc1)
 in the source repository. Large assets never enter Git history. Raw geometry and
 checkpoint files are accompanied by NOTICE, licenses and the rights manifest.
 Use `--source` with downloaded files for offline or authenticated access; see

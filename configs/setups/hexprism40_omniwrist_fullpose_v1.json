@@ -15,7 +15,7 @@
     "sha256": "d3b0a86835fdf59dd606adda68304f9f9c6d9778ebc93f919007d965cdc543ef"
   },
   "assets_manifest": "manifests/setups/hexprism40_omniwrist_fullpose_v1.json",
-  "assets_manifest_sha256": "47204b2ef8ae5606e3adb64ed8f489e75cdd58704f58f438db64a7efe2c9d4fc",
+  "assets_manifest_sha256": "f1674ddffea8f11893f609ee54472b7aa97524213897bd0c3d62fe48cea919d7",
   "objects": [
     {
       "id": "regular_hex_prism_af40mm_h40mm_chamfered",

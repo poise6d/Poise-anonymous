@@ -63,7 +63,7 @@ poise train --setup hexprism40_palmup_v1 --profile smoke --output outputs/train/
 
 Output directories must be new. Use `custom` or `reference` for longer training;
 see the [reproduction guide](docs/reproduction.md) for hardware and launch settings.
-Assets and checkpoints are available in [Releases](https://github.com/poise6d/Poise/releases/tag/v0.1.0-rc1).
+Assets and checkpoints are available in [Releases](https://github.com/poise6d/Poise-anonymous/releases/tag/v0.1.0-rc1).
 
 ## Reference setups
 
